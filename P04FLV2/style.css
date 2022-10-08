@@ -1,0 +1,25 @@
+body{
+    max-width: 900px;
+    display: contents;
+}
+fieldset{
+    background-color: whitesmoke
+}
+
+.upper{
+    font-size: 30px;
+}
+.bungkusan{
+    color: red;
+    font-size: 18px;
+}
+
+b{
+    color: red;
+}
+
+button{
+    text-align: center;
+    font-size: 25px;
+    font-weight: 500;
+}
