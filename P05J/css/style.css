@@ -1,0 +1,46 @@
+*{
+    margin: 0;
+    padding: 0;
+    background-color: tan;
+    background-position: center;
+    background-attachment: fixed;
+}
+
+.container {
+    max-width: 500px;
+    margin: 0 auto;
+}
+.atas {
+    font-size: 25px;
+}
+
+table {
+    font-family: arial, sans-serif;
+    border-collapse: collapse;
+    width: 100%;
+    max-width: 900px;
+    border-spacing: 2px;
+    transition: 2s;
+  }
+  td, th{
+    border: 2px solid darkred;
+    text-align: left;
+    padding: 8px;
+  }
+
+  th{
+    background-color: darkgoldenrod;
+  }
+  
+  tr:nth-child(even) {
+    background-color: darkblue;
+  }
+  .button
+  {
+    font-size: 16px;
+    font-weight: 500;
+    padding: 12px 35px;
+    color: white;
+    border-radius: 40px;
+    display: inline-block;
+  }

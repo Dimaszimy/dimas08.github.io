@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <link rel="stylesheet" href="css/style.css">
+        <title>Top 5 Friends in campus</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.1/jquery.min.js" integrity="sha512-aVKKRRi/Q/YV+4mjoKBsE4x3H+BkegoM/em46NNlCqNTmUYADjBbeNefNxYV7giUp0VxICtqdrbqU7iVaeZNXA==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    </head>
+    <body>
+        <center><div class="container">
+            <div class="atas">
+                <h1>My Top 10 Best Friends</h1>
+            </div>
+        </div></center>
+        <center><table class="tabelku">
+            <tr>
+                <th rowspan="2">Nama</th>
+            </tr>
+            <tr>
+                <th>Alamat</th>
+                <th>Nim</th>
+                <th>Aksi</th>
+            </tr>
+            <tr class="row" id="row__1">
+                <td class="cell" id="nama__1">Abimanyu Putra Suteja</td>
+                <td class="cell" id="alamat__1">Majalengka</td>
+                <td class="cell" id="nim__1">41226149</td>
+                <td class="cell" id="hapus__1">Hapus</td>
+            </tr>
+            <tr class="row" id="row__2">
+                <td class="cell" id="nama__2">Muhamad Taufiq Hidayat</td>
+                <td class="cell" id="alamat__2">Majalengka</td>
+                <td class="cell" id="nim__2">41226123</td>
+                <td class="cell" id="hapus__2">Hapus</td>
+            </tr>
+            <tr class="row"  id="row__3" >
+                <td class="cell" id="nama__3">Maulana Sujarwadi</td>
+                <td class="cell" id="alamat__3">Kuningan</td>
+                <td class="cell" id="nim__3">41226152</td>
+                <td class="cell" id="hapus__3">Hapus</td>
+            </tr>
+            <tr class="row" id="row__4">
+                <td class="cell" id="nama__4">Muhamad Bagus Mustofa Madinah</td>
+                <td class="cell" id="alamat__4">Majalengka</td>
+                <td class="cell" id="nim__4">41226122</td>
+                <td class="cell" id="hapus__4">Hapus</td>
+            </tr>
+            <tr class="row" id="row__5">
+                <td class="cell" id="nama__5">Muhamad Ibnu Syna</td>
+                <td class="cell" id="alamat__5">Majalengka</td>
+                <td class="cell" id="nim__5">41226083</td>
+                <td class="cell" id="hapus__5">Hapus</td>
+            </tr>
+         
+       </table></center>
+        <script>
+            $(document).ready(function(){
+                //alert(0)
+                $('.cell').click(function(){
+                    //alert(1)
+                    let isi = $(this).text();
+                    let tid = $(this).prop('id');
+                    let rid = tid.split('__');
+                    let id_row = rid[1];
+                    let nama_mahasiswa = $('#nama__'+id_row).text();
+                    
+                    if(isi=='Hapus'){
+                        let yakin = confirm(`Yakin hapus ${nama_mahasiswa} dari list ??`);
+                        if(!yakin) return;
+                        
+                        $('#row__'+id_row).fadeOut();
+                    
+                    }
+                    else{
+                        alert('Belum ada aksi.Terimakasih.')
+                    }
+                })
+            })
+        
+        </script>
+    </body>
+    </html>
